@@ -1,6 +1,3 @@
-import random
-
-
 def get_response(message):
     p_message = message.lower()
 
@@ -11,9 +8,12 @@ def get_response(message):
         return f"***{add_food.capitalize()}*** has been added to the list."
 
     if p_message.find('!list') > -1:
-        return "list"
+        return "The list contains:"
 
     if p_message == '!help':
         return '`This is a help message`'
+
+    if p_message == '!pick':
+        return "We got"
 
     return None
